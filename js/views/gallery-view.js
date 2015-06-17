@@ -12,6 +12,7 @@ app.Views.GalleryView = app.Extensions.View.extend({
      the App already present in the HTML.*/
     id: 'gallery-page',
 
+    headerTemplate: _.template($('#header-template').html()),
     menuTemplate: _.template($('#menu-template').html()),
 
     // Delegated events for creating new items, and clearing completed ones.

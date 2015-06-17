@@ -83,7 +83,8 @@ body {
 }
 /*UNDERLINE MENU NAVIGATION END*/
 
-#home-page .logo{
+#home-page .logo,
+#gallery-page .logo{
     border: 0;
     position: fixed;
     padding-top: 22px;
@@ -96,7 +97,8 @@ body {
     -o-transition: all 0.7s;
     transition: all 0.7s;
 }
-#home-page .logo:hover{    
+#home-page .logo:hover,
+#gallery-page .logo:hover{    
     opacity: 1;
     -webkit-transition: all 1.3s;
     -moz-transition: all 1.3s;
@@ -105,7 +107,8 @@ body {
     transition: all 1.3s;
 }
 
-#home-page .content{
+#home-page .content,
+#gallery-page .content{
     top: 0;
     position: fixed;
     list-style: none;
@@ -115,11 +118,13 @@ body {
     padding-top: 3px;
     right: 20px;
 }
-#home-page .content li{
+#home-page .content li,
+#gallery-page .content li{
     display: inline-block;
     margin-right: 30px;
 }
-#home-page .content li:last-child{
+#home-page .content li:last-child,
+#gallery-page .content li:last-child{
     font-weight: 700;
 }
 #dotNavigation{

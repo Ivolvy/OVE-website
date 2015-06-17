@@ -64,6 +64,22 @@ app.Views.HomeView = app.Extensions.View.extend({
                 navTo = -1;
                 $video.playbackRate = 1;
             }
+            
+            //enable the dot assign to the moment in the video
+            if($video.currentTime >= 0 && $video.currentTime < 1){
+                that.$("#dotNavigation li").removeClass('current');
+                that.$("#dotNavigation li:nth-child(1)").toggleClass('current');
+            }
+            if($video.currentTime >= 1 && $video.currentTime < 2){
+                that.$("#dotNavigation li").removeClass('current');
+                that.$("#dotNavigation li:nth-child(2)").toggleClass('current');
+            }
+            else if($video.currentTime >= 2 && $video.currentTime < 3){
+                that.$("#dotNavigation li").removeClass('current');
+                that.$("#dotNavigation li:nth-child(3)").toggleClass('current');
+            }
+            
+            
         }, false);
 
         //on click on begin experience
@@ -77,12 +93,14 @@ app.Views.HomeView = app.Extensions.View.extend({
         TweenMax.staggerFrom(".experience", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 
 
-
-        this.$("#dotNavigation .first").click(function(){
+        this.$("#dotNavigation li").click(function(event){
+            var target = $( event.target );
+            navTo = target.attr('timeValue');
+            alert(navTo);
             loop = false;
-            navTo = 0;
             $video.playbackRate = 6;
         });
+      
         
         
         
