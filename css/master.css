@@ -6,7 +6,7 @@ html, body{
 }
 
 body {
-    position: fixed;
+    font-family: 'Lato', sans-serif;
 }
 
 .page {
@@ -27,287 +27,7 @@ body {
     display: none;
 }
 
-
-
-
-/*----------------------------------------------*/
-/*--------------MISSION PAGE VIEW---------------*/
-/*----------------------------------------------*/
-
-#mission-page {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    height: 100%;
-    /*position: relative;*/
-    background: url("../img/backgrounds/bg_img_dog_blurr.jpg") no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
-}
-
-#mission-page h1, #mission-explication h1 {
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    color: #FFF;
-    display: inline-block;
-    margin-left: -38px;
-}
-
-#main {
-    position: relative;
-    overflow: auto;
-    height: 415px;
-}
-
-#mission-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-#mission-list li {
-    position: relative;
-    height: 74px;
-    line-height: 74px;
-    font-size: 12px;
-    margin-bottom: 2px;
-    background-color: #ababab;
-    background:rgba(255,255,255,0.6);
-    box-sizing: border-box;
-}
-
-#mission-list li:last-child {
-    border-bottom: none;
-}
-
-#mission-list li #date {
-    padding-bottom: 0;
-}
-#mission-list li #title {
-    padding-top: 5px;
-}
-
-#mission-list li label {
-    display: block;
-    margin-left: 15px;
-    line-height: 1.2;
-}
-
-
-.navigation {
-    color: #FFF;
-    text-align: center;
-    background-color: #4d3267;
-    opacity: 0.9;
-    height: 46px;
-    line-height: 45px;
-    font-size: 11px;
-}
-
-
-.filters {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    right: 0;
-    left: 0;
-}
-
-.filters li {
-    display: inline-block;
-    border-right: 1px solid #654e7c;
-    opacity: 0.8;
-    width: 32%;
-}
-
-.filters li a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-
-.filters li a.selected {
-    border-bottom: 1px solid #FFF;
-    padding-bottom: 4px;
-}
-
-.filters li:last-child {
-    border-right: none;
-}
-
-#mission-page header{
-    height: 42px;
-    width: 100%;
-    background-color: #cd522a;
-    opacity: 0.9;
-    display: inline-block;
-    text-align: center;
-}
-
-#left-menu{
-    width: 36px;
-    height: 33px;
-    display: inline-block;
-    float: left;
-    margin-top: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-#ove-logo{
-    background-color: #0000FF;
-    display: inline-block;
-}
-
-#mission-date{
-    color: #000;
-    font-size: 12px;
-    padding-bottom: 2px;
-}
-
-#mission-title{
-    color: #492c66;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-#sort{
-    height: 38px;
-    line-height: 38px;
-    background-color: #878787;
-    background:rgba(255,255,255,0.3);
-    text-align: right;
-}
-#sort span{
-    font-weight: 300;
-    font-size: 14px;
-}
-#sort select{
-    background: none;
-    border: 0;
-    outline:none;
-}
-#sort #list{
-    color: #492c66;
-    font-weight: 700;
-    font-size: 14px;
-    padding-right: 7px;
-    margin-right: 3px;
-    padding-left: 9px;
-}
-
-#mission-list .view,{
-    max-width: 170px;
-}
-#mission-list .view, #mission-list #mission-icons{
-    display: inline-block;
-    vertical-align: middle;
-}
-#mission-list #mission-icons{
-    position: absolute;
-    right: 0;
-    margin-right: 70px;
-}
-#mission-list #mission-icons img{
-    padding-left: 5px;
-    vertical-align: middle;
-    width: 20px;
-}
-
-#mission-share{
-    width: 57px;
-    height: 100%;
-    float: right;
-    text-align: center;
-}
-#mission-share img{
-    width: 30px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-/*Three genre of mission - light and dark*/
-.game-light{  
-    border-right: 6px solid #c9603e;
-}
-.fun-light{
-    border-right: 6px solid #983554;
-}
-.sensibility-light{
-    border-right: 6px solid #2f5b7f;
-}
-.game-dark{
-    background-color: #b98e80;
-}
-.fun-dark{
-    background-color: #a8808d;
-}
-.sensibility-dark{
-    background-color: #768a9b;
-}
-
-
-
-/*----------------------------------------------*/
-/*-----------MISSION PROPOSITION VIEW-----------*/
-/*----------------------------------------------*/
-
-#mission-proposition{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    height: 100%;
-    background: url("../img/backgrounds/bg_img_dog_blurr.jpg") no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
-    color: #FFF;
-}
-
-#mission-proposition header{
-    margin-top: 30px;
-    height: 124px;
-    width: 100%;
-    background:rgba(184,77,43,0.9); /*#b84d2b*/
-    opacity: 0.9;
-    text-align: center;
-}
-
-#mission-proposition h2{
-    font-weight: 300;
-    font-size: 19px;
-    margin: 0;
-    padding-top: 22px;
-}
-#mission-proposition h1{
-    font-size: 41px;
-    margin: 0;
-    padding-top: 5px;
-}
-
-#mission-proposition footer, #mission-explication footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-.button{
-    width: 48%;
-    height: 70px;
-    background:rgba(70,43,96,0.9); /*#462b60*/
-    display: inline-block;
-    text-align: center;
-    font-size: 25px;
-    line-height: 70px;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #FFF;
-}
-#mission-proposition .accept{
-    float: right;
-}
-#mission-explication footer{
-    text-align: center;
-}
-
-
-.no-select {
+.noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -316,42 +36,185 @@ body {
     user-select: none;
 }
 
-
-/*----------------------------------------------*/
-/*-----------MISSION EXPLICATION VIEW-----------*/
-/*----------------------------------------------*/
-
-#mission-explication{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+.pageContainer{
     height: 100%;
-    background: url("../img/backgrounds/bg_img_dog_blurr.jpg") no-repeat center center fixed;
-    background-size: cover;
+    display: block;
+}
+
+.scrollContent{
+   /* height: 6500px;*/
+}
+
+/*----------------------------------------------*/
+/*----------------HOME PAGE VIEW----------------*/
+/*----------------------------------------------*/
+
+#home-page{
+    background-color: #f2f2f2;
     overflow: hidden;
-    color: #FFF;
+}
+#header-shape {
+    border-top: 60px solid #fff;
+    position: fixed;
+    z-index: 1000;
+}
+#header-shape .content li{
+    position:relative;
+    cursor: pointer;
+}
+/*UNDERLINE MENU NAVIGATION START*/
+#header-shape .content .under:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    opacity: 0.6;
+    background-color: #492c66;
+    content: "";
+    transition: width 0.4s;
+}
+#header-shape .content .under:hover {
+    color: #492c66;
+}
+#header-shape .content .under:hover:after{
+    width: 50%;
+}
+/*UNDERLINE MENU NAVIGATION END*/
+
+#home-page .logo{
+    border: 0;
+    position: fixed;
+    padding-top: 22px;
+    top: 0;
+    padding-left: 20px;
+    opacity: 0.6;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+#home-page .logo:hover{    
+    opacity: 1;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -ms-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
 }
 
-#mission-explication header{
-    height: 42px;
+#home-page .content{
+    top: 0;
+    position: fixed;
+    list-style: none;
+    color: #7a648f;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 3px;
+    right: 20px;
+}
+#home-page .content li{
+    display: inline-block;
+    margin-right: 30px;
+}
+#home-page .content li:last-child{
+    font-weight: 700;
+}
+#dotNavigation{
+    top: 34%;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+
+.experience{
+    bottom: 20px;
+    position: absolute;
     width: 100%;
-    background:rgba(184,77,43,0.9); /*#b84d2b*/
-    opacity: 0.9;
     text-align: center;
+    margin: auto; 
+    height: 120px;
 }
 
-#mission-explication h1 {
-    margin-left: 0;
+.experience .actual{
+    margin-bottom: 5px;
+    color: #959595;
+    font-size: 14px;
+}
+.experience .launch{
+    color: #492c66;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+}
+.experience .picto{
+    cursor: pointer;
 }
 
-#googleMap{
-    width: 100%;
-    height: 86%;
+/*----------------------------------------------*/
+/*---------------------VIDEO--------------------*/
+/*----------------------------------------------*/
+
+
+video#vid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }
 
-.begin{
-    min-width: 185px;
+
+/*----------------------------------------------*/
+/*--------------------GALLERY-------------------*/
+/*----------------------------------------------*/
+
+.grid{
+    margin-left: 10px;
 }
 
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 20%;
+}
+.grid-item--width2 { width: 40%; }
+.grid-item--height2 { height: 40%; }
+.grid-item {
+    float: left;
+}
+.grid-item img {
+    display: block;
+    max-width: 95%;
+    margin-top: 10px;
+}
+.text-gallery{
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.static-filter{
+    position: absolute;
+    z-index: 1;
+    padding-top: 100px;
+    cursor: pointer;
+}
 
 /*----------------------------------------------*/
 /*------------------GOOGLE MAP------------------*/
@@ -369,11 +232,65 @@ body {
 /*------------------PANEL MENU------------------*/
 /*----------------------------------------------*/
 
+
+
+.left-menu{
+    width: 36px;
+    height: 33px;
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#panel-menu .title{
+    border-bottom: 1px solid #fff;
+    width: 209px;
+    padding-bottom: 7px;
+    opacity: 0.8;
+}
+#panel-menu p{
+    margin-bottom: 7px;
+}
+.bold{
+    font-weight: 700;
+}
+#panel-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+select.custom_dropdown {
+    background-color: transparent;
+    width: 200px;
+}
+.pageContent{
+    position: relative;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 nav.slide-menu-left {
     position: fixed;
     z-index: 20;
-    background-color: #462b60;
+    background:rgba(58,40,77,0.9);
     overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.left-menu {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -382,7 +299,9 @@ nav.slide-menu-left {
 }
 nav.slide-menu-left ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
+    font-size: 15px;
+    opacity: 0.8;
 }
 nav.slide-menu-left {
     font-weight: 300;
@@ -390,16 +309,21 @@ nav.slide-menu-left {
 }
 
 nav.slide-menu-left {
-    top: 42px; /*put this dynamically ?*/
-    width: 90%;
-    height: 100%;
+    top: 74px;
+    min-width: 285px;
+    width: 21%;
+    min-height: 505px;
+    height: 78%;
+    position: absolute;
 }
 nav.slide-menu-left li {
     display: block;
     text-align: left;
-    margin-left: 50px;
-    margin-bottom: 20px;
+    margin-left: 24px;
+    margin-bottom: 7px;
     cursor: pointer;
+    padding-left: 14px;
+    width: 200px;
 }
 nav.slide-menu-left li:first-child {
     border-top: none;
@@ -413,20 +337,195 @@ nav.slide-menu-left a {
     color: #FFF;
 }
 nav.slide-menu-left {
-    left: -90%;
+    left: -84%;
+    padding-left: 45px;
+    padding-top: 50px;
 }
-.page-body.sml-open nav.slide-menu-left {
-    left: 0;
+.pageContent.sml-open nav.slide-menu-left {
+    left: 0; /*push the page to the right - 0px to do nothing*/
 }
 
-.hamburger{
-    background: url("../img/menu/hamburger-menu.png");
-    background-size: cover;
+nav.slide-menu-left li.select{
+    background-color: rgba(255,255,255, 0.2);
+    padding-left: 15px;
 }
-.close{
-    background: url("../img/menu/close-menu.png");
-    background-size: cover;
+
+.left-menu.hide{
+    margin-left: -120px;
 }
+
+
+/*----------------------------------------------*/
+/*--------------------VIDEO---------------------*/
+/*----------------------------------------------*/
+
+#set-height {
+    display: block;
+    height: 13500px;
+}
+#v0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*----------------------------------------------*/
+/*-------------DOTSTYLE NAVIGATION--------------*/
+/*----------------------------------------------*/
+
+.dotstyle ul {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dotstyle li {
+    position: relative;
+    display: block;
+    margin: 0 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.dotstyle li a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-indent: -999em; /* make the text accessible to screen readers */
+    cursor: pointer;
+    position: absolute;
+}
+
+.dotstyle li a:focus {
+    outline: none;
+}
+
+/* Scale up */
+
+.dotstyle-scaleup li a {
+    -webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dotstyle-scaleup li a:hover,
+.dotstyle-scaleup li a:focus {
+    background-color: white;
+}
+
+.dotstyle-scaleup li.current a {
+    background-color: white;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
+/*----------------------------------------------*/
+/*---------------CUSTOM DROPDOWN----------------*/
+/*----------------------------------------------*/
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 5.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    .custom-dropdown--color{
+        background: rgba(58,40,77,0.9);
+    }
+    .custom-dropdown__select--color{
+        background: rgba(58,40,77,0.9);
+    }
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after {
+        /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 1em;
+        font-size: .625em;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%;
+        margin-top: -.5em;
+    }
+
+    .custom-dropdown::before {
+        /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0, 0, 0, .3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0, 0, 0, .1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        top: .5em;
+        bottom: .5em;
+        background-color: transparent;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0, 0, 0, .9);
+
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select {
+            padding-right: .9em
+        }
+        .custom-dropdown--large .custom-dropdown__select {
+            padding-right: 1.3em
+        }
+        .custom-dropdown--small .custom-dropdown__select {
+            padding-right: .5em
+        }
+    }
+}
+
+
 
 /*----------------------------------------------*/
 /*-----ALL ANIMATIONS FOR PAGE TRANSITIONS------*/

@@ -12,14 +12,191 @@
 
 
 </head>
-<body class="no-select">
+<body class="noSelect">
+
 <script type="text/template" id="home-page" name="home-page">
-	<h1>OVE</h1>
-	<div class="item-content">
-		
+	<div class="pageContainer">
+		<div id="dotNavigation" class="dotstyle dotstyle-scaleup">
+			<ul>
+				<li class="current"><a href="#"></a></li>
+				<li class="first"><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+		<div class="scrollContent">
+			<video id="vid" tabindex="0"  autoplay loop autobuffer="autobuffer" preload="preload">
+				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="media/exp_7.webm"></source>
+			</video>
+		</div>
+		<div class="experience">
+			<p class="actual">L'experience sera atualisée dans 00:08:47</p>
+			<p class="launch">LANCER L'EXPERIENCE</p>
+			<img class="picto" src="img/picto_scroll.png">
+		</div>
 	</div>
-	
 </script>
+
+
+
+<script type="text/template" id="gallery-page" name="gallery-page">
+	<div class="pageContainer">
+		<!--<div class="item-content"></div>-->
+		<section class="pageContent">
+			<div class="grid">
+				<!-- width of .grid-sizer used for columnWidth -->
+				<div class="left-menu static-filter">
+					<img class="filter" src="img/btn_filtre.png">
+				</div>
+				<div class="grid-sizer"></div>
+	
+				<div class="grid-item grid-item--width2 shadow">
+					<img src="img/gallery/197_1.jpg"/>
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/6108b580.jpeg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/82743738.jpeg" />
+				</div>
+				<div class="grid-item grid-item--width2">
+					<img src="img/gallery/a1mV1egnQwOqxZZZvhVo_street.jpg" />
+				</div>
+				<div class="grid-item grid-item--width2">
+					<img src="img/gallery/couleurs_facade-immeuble.jpg" />
+				</div>
+				<div class="grid-item text-gallery">
+					RUE DU SAINT SÉPULCRE
+				</div>
+				<div class="grid-item shadow">
+					<img src="img/gallery/geometry_facade-bois.jpg" />
+				</div>
+	
+				<div class="grid-item shadow">
+					<img src="img/gallery/geometry_facade-bois2.jpg" />
+				</div>
+				<div class="grid-item high" style="margin-top: 100px">
+					<img src="img/gallery/ombres_facade-immeuble.jpg" />
+				</div>
+				<div class="grid-item shadow">
+					<img src="img/gallery/ombres_fleur.JPG" />
+				</div>
+				<div class="grid-item text-gallery">
+					"Elle est où la poulette ?"
+				</div>
+				<div class="grid-item high">
+					<img src="img/gallery/parked-bike.JPG" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/photo-1415200358018-bb07fced3660.jpeg" />
+				</div>
+				<div class="grid-item shadow">
+					<img src="img/gallery/photo-1422544834386-d121ef7c6ea8.jpeg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/photo-1428836962997-9533e673a68f.jpeg" />
+				</div>
+				<div class="grid-item" >
+					<img src="img/gallery/photo-1429105049372-8d928fd29ba1.jpeg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/r0r252VR6WqPRsxngGUE_telefoon%20politie.jpg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/rouge_fleur-facade.jpg" />
+				</div>
+				<div class="grid-item shadow">
+					<img src="img/gallery/rouge_lampion.JPG" />
+				</div>
+				<div class="grid-item high">
+					<img src="img/gallery/rouge_monop.jpg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/string-lights.JPG" />
+				</div>
+				<div class="grid-item high">
+					<img src="img/gallery/tag_panda.JPG" />
+				</div>
+				<div class="grid-item high">
+					<img src="img/gallery/tumblr_nn2n6jOzzn1sfie3io1_1280.jpg" />
+				</div>
+				<div class="grid-item shadow">
+					<img src="img/gallery/tumblr_nntzc551C01sfie3io1_1280.jpg" />
+				</div>
+				<div class="grid-item">
+					<img src="img/gallery/unsplash_5288cc8f3571d_1.jpeg" />
+				</div>
+	
+			</div>
+		</section>
+	</div>
+</script>
+
+
+<script type="text/template" id="menu-template" name="menu-template">
+	<nav id="panel-menu" class="slide-menu-left noSelect">
+		<img class="close-menu" src="img/picto_close.png">
+		<div class="title">+ FILTRER <span class="bold">PAR VILLE</span></div>
+		<ul class="city">
+			<li>ANNECY</li>
+			<li>PARIS</li>
+			<li class="select">LYON</li>
+			<li>TOULOUSE</li>
+			<li>MONTPELLIER</li>
+			<li>
+				<p>Sélectionner une autre ville</p>
+				<span class="custom-dropdown custom-dropdown--color">
+					<select class="custom-dropdown__select custom-dropdown__select--color">
+						<option>...</option>
+						<option>LILLE</option>
+						<option>BORDEAUX</option>
+						<option>STRASBOURG</option>
+					</select>
+				</span>
+			</li>
+		</ul>
+
+		<div class="title">+ FILTRER <span class="bold">PAR MISSION</span></div>
+		<ul class="mission">
+			<li>ÉCLATS DE RIRE</li>
+			<li value="high">HAUTEURS</li>
+			<li>GRAPHIQUE</li>
+			<li class="select" value="shadow">OMBRES</li>
+			<li>QUELQUES MOTS</li>
+			<li>
+				<p>Sélectionner une autre mission</p>
+				<span class="custom-dropdown custom-dropdown--color">
+					<select class="custom-dropdown__select custom-dropdown__select--color">
+						<option>...</option>
+						<option>SURNOMS</option>
+						<option>DÉTOUR</option>
+						<option>STATUES EN VIE</option>
+					</select>
+				</span>
+			</li>
+		</ul>
+	</nav>
+</script>
+
+<script type="text/template" id="header-template" name="header-template">
+	<div id="header-shape">
+		<img class="logo" src="img/header/logo-header.png">
+		<ul class="content">
+			<li class="under">L'OEUVRE COLLABORATIVE</li>
+			<li class="under">LA GALERIE</li>
+			<li class="under">PROPOSER UNE MISSION</li>
+			<li>LE PROJET OVE
+				<img src="img/header/picto_menu_deroulant.png">
+			</li>
+			<li>MON COMPTE
+				<img src="img/header/picto_menu_deroulant.png">
+			</li>
+		</ul>
+	</div>
+</script>
+
 
 
 <script src="js/vendor/json2-min.js"></script>
@@ -32,6 +209,16 @@
 
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <script src="js/vendor/backbonefire.min.js"></script>
+
+<script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="js/vendor/isotope.pkgd.min.js"></script>
+<script src="js/vendor/dots.js"></script>
+
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/TimelineMax.min.js"></script>
+
+<script src="js/vendor/ScrollMagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
 
 
 <script src="js/app.js"></script>
@@ -48,6 +235,7 @@
 <!--VIEWS-->
 <script src="js/views/app-view.js"></script>
 <script src="js/views/home-view.js"></script>
+<script src="js/views/gallery-view.js"></script>
 
 
 <!--ROUTERS-->
