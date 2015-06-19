@@ -37,6 +37,7 @@ app.Views.GalleryView = app.Extensions.View.extend({
         this.$leftMenu = this.$('.left-menu');
         this.$page = this.$('.pageContainer');
         this.$pageContent = this.$('.pageContent');
+        this.$grid = this.$('.grid');
 
         app.missionsPictures = new PicturesCollection();
 
@@ -54,7 +55,17 @@ app.Views.GalleryView = app.Extensions.View.extend({
                 that.displayImages();
             }
         });
+
+
+
+        for(var i=1;i < 43;i++){
+            this.$grid.append('<div class="grid-item shadow"><img src="img/gallery/ombres/ombres_'+i+'.jpg"/></div>');
+        }
+        for(var i=1;i < 37;i++){
+            this.$grid.append('<div class="grid-item high"><img src="img/gallery/vrac/gallery_'+i+'.jpg"/></div>');
+        }
         
+        //init the isotope gallery when document is ready
         $(document).ready( function() {
             // init Masonry
                 grid = that.$('.grid').isotope({
