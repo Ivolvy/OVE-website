@@ -16,19 +16,26 @@
 
 <script type="text/template" id="home-page" name="home-page">
 	<div class="pageContainer">
-		<div id="dotNavigation" class="dotstyle dotstyle-scaleup">
+		<div id="dotNavigation" class="dotstyle dotstyle-circlegrow hideOpacity">
 			<ul>
 				<li class="current"><a href="#" timeValue="0"></a></li>
-				<li><a href="#" timeValue="1"></a></li>
-				<li><a href="#" timeValue="2"></a></li>
 				<li><a href="#" timeValue="3"></a></li>
-				<li><a href="#" timeValue="4"></a></li>
 				<li><a href="#" timeValue="5"></a></li>
+				<li><a href="#" timeValue="11"></a></li>
+				<li><a href="#" timeValue="16"></a></li>
+				<li><a href="#" timeValue="20"></a></li>
+				<li><a href="#" timeValue="25"></a></li>
+				<li><a href="#" timeValue="31"></a></li>
+				<li><a href="#" timeValue="38"></a></li>
+				<li><a href="#" timeValue="43"></a></li>
+				<li><a href="#" timeValue="49"></a></li>
+				<li><a href="#" timeValue="54"></a></li>
 			</ul>
 		</div>
 		<div class="scrollContent">
 			<video id="vid" tabindex="0"  autoplay loop autobuffer="autobuffer" preload="preload">
-				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="media/exp_7.webm"></source>
+				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="media/galerie-interactive.webmhd.webm"></source>
+				<source type="video/ogg;" src="media/galerie-interactive.oggtheora.ogv"></source>
 			</video>
 		</div>
 		<div class="experience">
@@ -45,11 +52,13 @@
 	<div class="pageContainer">
 		<!--<div class="item-content"></div>-->
 		<section class="pageContent">
+			<div class="left-menu static-filter">
+				<img class="filter" src="img/picto_filtre.png">
+				<p>FILTRER</p>
+			</div>
+			
 			<div class="grid">
 				<!-- width of .grid-sizer used for columnWidth -->
-				<div class="left-menu static-filter">
-					<img class="filter" src="img/btn_filtre.png">
-				</div>
 				<div class="grid-sizer"></div>
 	
 				<div class="grid-item grid-item--width2 shadow">
@@ -61,7 +70,8 @@
 				<div class="grid-item">
 					<img src="img/gallery/82743738.jpeg" />
 				</div>
-				<div class="grid-item grid-item--width2">
+				<div class="grid-item grid-item--width2 sound">
+					<div class="toPlay"></div>
 					<img src="img/gallery/a1mV1egnQwOqxZZZvhVo_street.jpg" />
 				</div>
 				<div class="grid-item grid-item--width2">
@@ -70,7 +80,8 @@
 				<div class="grid-item text-gallery">
 					RUE DU SAINT SÉPULCRE
 				</div>
-				<div class="grid-item shadow">
+				<div class="grid-item shadow sound">
+					<div class="toPlay"></div>
 					<img src="img/gallery/geometry_facade-bois.jpg" />
 				</div>
 	
@@ -184,8 +195,8 @@
 	<div id="header-shape">
 		<img class="logo" src="img/header/logo-header.png">
 		<ul class="content">
-			<li class="under">L'OEUVRE COLLABORATIVE</li>
-			<li class="under">LA GALERIE</li>
+			<li class="under"><a href="#/">L'OEUVRE COLLABORATIVE</a></li>
+			<li class="under gallery">LA GALERIE</li>
 			<li class="under">PROPOSER UNE MISSION</li>
 			<li>LE PROJET OVE
 				<img src="img/header/picto_menu_deroulant.png">

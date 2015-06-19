@@ -102,8 +102,7 @@ app.Views.GalleryView = app.Extensions.View.extend({
                 grid.isotope({ filter: '.'+value });
             }
         });
-        
-        
+
 
         return this;
     },
