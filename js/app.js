@@ -1,5 +1,4 @@
-
-var ENTER_KEY = 13;
+var homeIsDisplayed = false;
 
 window.app = {
     Views: {},

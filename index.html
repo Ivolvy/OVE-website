@@ -33,16 +33,18 @@
 			</ul>
 		</div>
 		<div class="scrollContent">
-			<video id="vid" tabindex="0"  autoplay loop autobuffer="autobuffer" preload="preload">
+			<video id="vid" tabindex="0"  autoplay autobuffer="autobuffer" preload="preload">
 				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="media/galerie-interactive.webmhd.webm"></source>
 				<source type="video/ogg;" src="media/galerie-interactive.oggtheora.ogv"></source>
+				<source type="video/mp4;" src="media/galerie-interactive.mp4"></source>
 			</video>
 		</div>
 		<div class="experience">
-			<p class="actual">L'experience sera atualisée dans 00:08:47</p>
+			<p id="timer" class="actual">L'experience sera atualisée dans 00:08:47</p>
 			<p class="launch">LANCER L'EXPERIENCE</p>
 			<img class="picto" src="img/picto_scroll.png">
 		</div>
+		<div id="sound"><img class="picto" src="img/picto_son.png"></div>
 	</div>
 </script>
 
@@ -60,12 +62,7 @@
 			<div class="grid">
 				<!-- width of .grid-sizer used for columnWidth -->
 				<div class="grid-sizer"></div>
-	
-				
-				
-				
-				
-				
+
 			<!--	<div class="grid-item grid-item--width2 shadow">
 					<img src="img/gallery/ombres/ombres_01.jpg"/>
 				</div>
@@ -176,7 +173,7 @@
 
 		<div class="title">+ FILTRER <span class="bold">PAR MISSION</span></div>
 		<ul class="mission">
-			<li>ÉCLATS DE RIRE</li>
+			<li value="reflect">REFLETS</li>
 			<li value="high">HAUTEURS</li>
 			<li>GRAPHIQUE</li>
 			<li class="select" value="shadow">OMBRES</li>
@@ -197,10 +194,11 @@
 </script>
 
 <script type="text/template" id="header-template" name="header-template">
+	<div class="header-shadow"></div>
 	<div id="header-shape">
 		<img class="logo" src="img/header/logo-header.png">
 		<ul class="content">
-			<li class="under"><a href="#/">L'OEUVRE COLLABORATIVE</a></li>
+			<li class="under underline-header"><a href="#/">L'OEUVRE COLLABORATIVE</a></li>
 			<li class="under gallery">LA GALERIE</li>
 			<li class="under">PROPOSER UNE MISSION</li>
 			<li>LE PROJET OVE

@@ -85,6 +85,20 @@ body {
     color: #492c66;
 }
 /*UNDERLINE MENU NAVIGATION START*/
+.header-shadow{
+    box-shadow: 0px 30px 10px #f2f2f2;
+    height: 23px;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    transform: rotate(-1deg);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
 #header-shape .content .under:after{
     display: block;
     position: absolute;
@@ -109,7 +123,7 @@ body {
 #gallery-page .logo{
     border: 0;
     position: fixed;
-    padding-top: 22px;
+    padding-top: 19px;
     top: 0;
     padding-left: 20px;
     opacity: 0.6;
@@ -120,7 +134,8 @@ body {
     transition: all 0.7s;
 }
 #home-page .logo:hover,
-#gallery-page .logo:hover{    
+#gallery-page .logo:hover,
+.header-shadow:hover{
     opacity: 1;
     -webkit-transition: all 0.7s;
     -moz-transition: all 0.7s;
@@ -150,7 +165,7 @@ body {
     font-weight: 700;
 }
 #dotNavigation{
-    top: 25%;
+    top: 20%;
     position: fixed;
     z-index: 10;
     right: 0;
@@ -182,6 +197,13 @@ body {
     margin-top: 0;
 }
 .experience .picto{
+    cursor: pointer;
+}
+
+#sound{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
     cursor: pointer;
 }
 
@@ -240,8 +262,33 @@ video#vid {
 }
 .text-gallery{
     text-align: center;
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-style: italic;
+    margin-left: -10px;
+}
+
+.text-gallery:before {
+    display: block;
+    width: 77px;
+    height: 1px;
+    opacity: 0.8;
+    background-color: black;
+    content: "";
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.text-gallery:after {
+    display: block;
+    width: 77px;
+    height: 1px;
+    opacity: 0.8;
+    background-color: black;
+    content: "";
+    margin: auto;
+    text-align: center;
+    margin-top: 12px;
 }
 .static-filter{
     position: absolute;
@@ -490,7 +537,7 @@ nav.slide-menu-left li.select{
 .dotstyle-circlegrow li a {
     overflow: hidden;
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px #492c66;
+    box-shadow: inset 0 0 0 1px #492c66;
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
 }

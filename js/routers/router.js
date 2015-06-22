@@ -8,18 +8,12 @@ app.Router = Backbone.Router.extend({
 	},
 
 	home: function () {
-		// make the Home view persist in memory and on the DOM
-		//if (!this.homeView) {
-			//this.homeView = new app.Views.Home();
-		//}
+		homeIsDisplayed = true;
 		var view = new app.Views.HomeView();
 		app.getInstance().goto(view);
 	},
 	gallery: function () {
-		// make the Home view persist in memory and on the DOM
-		//if (!this.homeView) {
-		//this.homeView = new app.Views.Home();
-		//}
+		homeIsDisplayed = false;
 		var view = new app.Views.GalleryView();
 		app.getInstance().goto(view);
 	}

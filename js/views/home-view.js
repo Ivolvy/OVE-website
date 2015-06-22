@@ -38,9 +38,11 @@ app.Views.HomeView = app.Extensions.View.extend({
 
         this.$page = this.$('.pageContainer');
         this.$pageContent = this.$('.pageContent');
-
         
-
+        this.$timer = this.$("#timer");
+        
+		pageIsDisplayed = true;
+		
         return this;
     },
 
@@ -55,8 +57,10 @@ app.Views.HomeView = app.Extensions.View.extend({
         loop = true;
         this.displayShapeHeader();
         this.initDotNavigation();
-
-
+        
+        //launch the timer
+        this.timer();
+        
         //loop only the 3 seconds of video
         $video.addEventListener("timeupdate", function () {
             if ($video.currentTime > 2.8 && loop == true) {
@@ -68,8 +72,8 @@ app.Views.HomeView = app.Extensions.View.extend({
                 $video.playbackRate = 1;
             }
             
-            //CRAP - to modify if time
-            //enable the dot assign to the moment in the video
+
+            //enable the dot assign to the moment in the video - a little crap
             if($video.currentTime >= 0 && $video.currentTime < 2.8){
                 that.$("#dotNavigation li").removeClass('current');
                 that.$("#dotNavigation li:nth-child(1)").toggleClass('current');
@@ -117,12 +121,15 @@ app.Views.HomeView = app.Extensions.View.extend({
             else if($video.currentTime >= 54){
                 that.$("#dotNavigation li").removeClass('current');
                 that.$("#dotNavigation li:nth-child(12)").toggleClass('current');
+                that.displayHeader();
+                enableMouseEvent = false;
             }
-            console.log($video.currentTime);
+            
+            //console.log($video.currentTime);
             
         }, false);
 
-        //on click on begin experience
+        //on click on begin experience - hide the panel
         this.$(".experience .picto").click(function(){
             TweenMax.staggerTo(".experience", 0.5, {opacity:0, y:150, ease:Back.easeIn}, 0.1);
             $video.currentTime = 3;
@@ -157,11 +164,35 @@ app.Views.HomeView = app.Extensions.View.extend({
         this.$("#header-shape .gallery").click(function(event){
             that.goToGallery();
         });
-        
-        
+
+
         return this;
     },
 
+
+        //counter before next experience
+        timer: function() {
+            var date1 = new Date();
+            var date2 = new Date("Oct 1 00:00:00 2020");
+            var sec = (date2 - date1) / 1000;
+            var n = 24 * 3600;
+
+            if (sec > 0) {
+                var j = Math.floor(sec / n);
+                var h = Math.floor((sec - (j * n)) / 3600);
+                var mn = Math.floor((sec - ((j * n + h * 3600))) / 60);
+                sec = Math.floor(sec - ((j * n + h * 3600 + mn * 60)));
+                if(sec < 10) {
+                    that.$timer.html("L'experience sera actualisée dans 00:" + mn + ":0" + sec);
+                }
+                else{
+                    that.$timer.html("L'experience sera actualisée dans 00:" + mn + ":" + sec);
+                }
+            }
+			if(homeIsDisplayed == true){
+				var tRebour = setTimeout("that.timer();", 1000);
+			}
+        },
     
     displayHeader: function(){
         that.$('#header-shape').css({
@@ -173,6 +204,9 @@ app.Views.HomeView = app.Extensions.View.extend({
         that.$('#header-shape .content').css({
             top: '0px'
         });
+        that.$('.header-shadow').css({
+            top: '0px'
+        });
     },
     hideHeader: function(){
         that.$('#header-shape').css({
@@ -182,6 +216,9 @@ app.Views.HomeView = app.Extensions.View.extend({
             top: '-65px'
         });
         that.$('#header-shape .content').css({
+            top: '-65px'
+        });
+        that.$('.header-shadow').css({
             top: '-65px'
         });
     },
