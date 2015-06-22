@@ -177,7 +177,7 @@ body {
 }
 
 .experience{
-    bottom: 20px;
+    bottom: -5px;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -195,6 +195,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     margin-top: 0;
+    margin-bottom: 9px;
 }
 .experience .picto{
     cursor: pointer;

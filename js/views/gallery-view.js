@@ -70,36 +70,60 @@ app.Views.GalleryView = app.Extensions.View.extend({
 
                 //filter the pictures
                 var value = target.attr('value');
-                grid.isotope({ filter: '.'+value });
+                if(value == "*"){
+                    grid.isotope({ filter: '*' });
+                }
+                else {
+                    grid.isotope({filter: '.' + value});
+                }
             }
         });
-
 
         return this;
     },
     
 	displayImagesOnGallery: function(){
 			//append all pictures in the gallery
-			for(var i=1;i < 43;i++){
-				this.$grid.append('<div class="grid-item shadow"><img src="img/gallery/ombres/ombres_'+i+'.jpg"/></div>');
-
-				if(i == 10) {
-					this.$grid.append('<div class="grid-item text-gallery">"Elle est où la poulette ?"</div>');
-				}
-				else if(i == 6){
-				
+			for(var i=1;i < 43;i++) {
+                if (i < 43) {
+                    this.$grid.append('<div class="grid-item shadow"><img src="img/gallery/ombres/ombres_' + i + '.jpg"/></div>');
+                }
+                if (i < 23) {
+                    this.$grid.append('<div class="grid-item reflect"><img src="img/gallery/reflect/reflect_' + i + '.jpg"/></div>');
+                }
+        
+				if(i == 4){
 					this.$grid.append('<div class="grid-item text-gallery">"Je rigole pas, à la bouche d\'égout je pète une crise"</div>');
 				}
-				if(i == 8){
-					for(y=0;y<usersImages.length;y++){
-						this.$grid.append('<div class="grid-item"><img src="img/gallery/usersImg/'+usersImages[y]+'"/></div>');
-				   }
+                /*USERS IMAGES*/
+				else if(i == 6){
+                    if(usersImages) {
+                        for (var y = 0; y < usersImages.length; y++) {
+                            this.$grid.append('<div class="grid-item"><img src="img/gallery/usersImg/' + usersImages[y] + '"/></div>');
+                        }
+                    }
 				}
-
+                else if(i == 10) {
+                    this.$grid.append('<div class="grid-item text-gallery">"Elle est où la poulette ?"</div>');
+                }
+                /*SOUND PART*/
+                else if(i == 5){
+                    this.$grid.append('<div class="grid-item sound"><div class="toPlay"></div><img src="img/gallery/sounds/son_1.png"/></div>');
+                }
+                else if(i == 9){
+                    this.$grid.append('<div class="grid-item sound"><div class="toPlay"></div><img src="img/gallery/sounds/son_2.png"/></div>');
+                }
+                else if(i == 15){
+                    this.$grid.append('<div class="grid-item sound"><div class="toPlay"></div><img src="img/gallery/sounds/son_3.png"/></div>');
+                }
+                else if(i == 20){
+                    this.$grid.append('<div class="grid-item sound"><div class="toPlay"></div><img src="img/gallery/sounds/son_4.png"/></div>');
+                }
+                else if(i == 24){
+                    this.$grid.append('<div class="grid-item sound"><div class="toPlay"></div><img src="img/gallery/sounds/son_5.png"/></div>');
+                }
+                
 			}
-		  /*  for(var i=1;i < 37;i++){
-				this.$grid.append('<div class="grid-item high"><img src="img/gallery/vrac/reflect_'+i+'.jpg"/></div>');
-			}*/
 			
 			//init the isotope gallery when document is ready
 			$(document).ready( function() {
